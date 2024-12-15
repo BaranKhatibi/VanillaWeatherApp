@@ -3,49 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+
     <title>Vanilla Weather</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
+    <div class="whole-page-container">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="form-input-text"
+          />
+          <input type="submit" value="Search" class="form-input-button" />
+        </form>
+      </header>
 
-    <main>
-    <div>
-      <h1>Paris</h1>
-      <p>
-        Saturday 16:15, moderate rain
-        <br />
-        Humidity: 87%, Wind: 7.2km/h
-      </p>
-      </div>
-      <div>
-        ☀️24°C
-      </div>
-    </main>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Paris</h1>
+            <p class="weather-app-details">
+              Saturday 16:15, moderate rain
+              <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temp">☀️24°C</div>
+        </div>
+      </main>
 
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://www.linkedin.com/in/baran-khatibi/" target="_blank">
-          Baran Khatibi
-        </a>
-        and is open-sourced
-        <a
-          href="https://github.com/BaranKhatibi/VanillaWeatherApp"
-          target="_blank"
-          >on Github</a
-        >
-        and
-        <a
-          href="https://vanilla-weather-applicationn.netlify.app/"
-          target="_blank"
-          >hosted on Netlify</a
-        >
-      </p>
-    </footer>
+      <footer class="footer-container">
+        <p>
+          This project was coded by
+          <a href="https://www.linkedin.com/in/baran-khatibi/" target="_blank">
+            Baran Khatibi
+          </a>
+          and is open-sourced
+          <a
+            href="https://github.com/BaranKhatibi/VanillaWeatherApp"
+            target="_blank"
+            >on Github</a
+          >
+          and
+          <a
+            href="https://vanilla-weather-applicationn.netlify.app/"
+            target="_blank"
+            >hosted on Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

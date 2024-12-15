@@ -1,0 +1,74 @@
+body {
+  background-color: #f9f7fe;
+  font-family: "Roboto", serif;
+}
+
+.whole-page-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 80%;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+/* Main Section */
+
+header {
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid #f9f7fe;
+}
+
+.form-input-text {
+  border: none;
+  background-color: #f9f7fe;
+  padding: 17px;
+  border-radius: 5px;
+  width: 75%;
+  font-size: 15px;
+}
+
+.form-input-button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #f65282;
+  padding: 17px 30px;
+  font-size: 15px;
+  transition: all 100ms ease-out;
+  cursor: pointer;
+}
+
+.form-input-button:hover {
+  color: #f65282;
+  background-color: #f9f7fe;
+  border: 1px solid #f65282;
+  padding: 16px 29px;
+  transform: scale(1, 1);
+}
+
+/* Main Section */
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+.weather-app-city {
+  font-size: 38px;
+  font-weight: bold;
+}
+/* Footer Section */
+
+.footer-container {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(39, 33, 66, 0.4);
+  padding: 17px 0 0 0;
+  border-top: 1px solid #f9f7fe;
+  margin-top: 20px;
+}
+
+.footer-container a {
+  color: #f65282;
+  text-decoration: none;
+}

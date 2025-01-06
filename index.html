@@ -33,16 +33,18 @@
       <main>
         <div class="weather-app-data" id="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="city">Paris</h1>
+            <h1 class="weather-app-city" id="city"></h1>
             <p class="weather-app-details">
-              Saturday 16:15, moderate rain
+              <span id="time"></span>,
+              <span id="description"></span>
               <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
             </p>
           </div>
           <div class="weather-app-temp">
             <div class="weather-app-icon">☀️</div>
-            <div class="weather-app-degree" id="#city-temp">24</div>
+            <div class="weather-app-degree" id="#city-temp"></div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>

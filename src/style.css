@@ -90,6 +90,45 @@ header {
   margin-top: 15px;
 }
 
+/* Forcast Section */
+
+.weather-forcast {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather-forcast-date {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 30px;
+}
+
+.weather-forcast-icon {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.weather-forcast-temperature {
+  display: flex;
+  color: #885df1;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.forcast-max {
+  text-align: center;
+  padding-right: 7px;
+}
+
+.forcast-min {
+  text-align: center;
+  padding-left: 7px;
+}
+
 /* Footer Section */
 
 .footer-container {

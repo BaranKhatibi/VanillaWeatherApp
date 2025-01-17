@@ -1,5 +1,4 @@
 function refreshWeather(response) {
-
   let tempElement = document.querySelector(".weather-app-degree");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
@@ -9,7 +8,6 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
-
 
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperature);
@@ -62,7 +60,28 @@ function searchHandler(event) {
   searchCity(inputElement.value);
 }
 
+function displayForcast() {
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forcastHtml = "";
+
+  days.forEach(function (day) {
+    forcastHtml += `         
+          <div class="weather-forcast-day">
+            <div class="weather-forcast-date">${day}</div>
+            <div class="weather-forcast-icon">🌧</div>
+            <div class="weather-forcast-temperature">
+              <div class="forcast-max"><strong>19°</strong></div>
+              <div class="forcast-min">10°</div>
+            </div>
+          </div>`;
+  });
+
+  let forcastElement = document.querySelector("#forcast");
+  forcastElement.innerHTML = forcastHtml;
+}
+
 let formElement = document.querySelector("#search-form-id");
 formElement.addEventListener("submit", searchHandler);
 
 searchCity("Paris");
+displayForcast();

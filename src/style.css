@@ -106,8 +106,9 @@ header {
 }
 
 .weather-forcast-icon {
-  text-align: center;
-  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
   margin-top: 10px;
 }
 

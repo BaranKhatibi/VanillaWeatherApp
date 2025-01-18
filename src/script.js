@@ -69,20 +69,32 @@ function getForcast(city) {
   axios.get(apiUrl).then(displayForcast);
 }
 
+function formatDay(time) {
+  let date = new Date(time * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function displayForcast(response) {
-  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
   let forcastHtml = "";
 
-  days.forEach(function (day) {
-    forcastHtml += `         
+  response.data.daily.forEach(function (day, index) {
+    if (index <= 7 && index >= 1) {
+      forcastHtml += `         
           <div class="weather-forcast-day">
-            <div class="weather-forcast-date">${day}</div>
-            <div class="weather-forcast-icon">🌧</div>
+            <div class="weather-forcast-date">${formatDay(day.time)}</div>
+            <img src="${day.condition.icon_url}" class="weather-forcast-icon"/>
             <div class="weather-forcast-temperature">
-              <div class="forcast-max"><strong>19°</strong></div>
-              <div class="forcast-min">10°</div>
+              <div class="forcast-max"><strong>${Math.round(
+                day.temperature.maximum
+              )}°</strong></div>
+              <div class="forcast-min">${Math.round(
+                day.temperature.minimum
+              )}°</div>
             </div>
           </div>`;
+    }
   });
 
   let forcastElement = document.querySelector("#forcast");
@@ -92,4 +104,4 @@ function displayForcast(response) {
 let formElement = document.querySelector("#search-form-id");
 formElement.addEventListener("submit", searchHandler);
 
-searchCity("Paris");
+searchCity("Mashhad");
